@@ -1,0 +1,81 @@
+/*
+ * Legibilis - FreeTube stylesheet
+ *
+ * Overrides the CSS custom properties FreeTube 0.25.x uses for its themes.
+ * FreeTube has no built-in custom CSS setting, so this has to be injected
+ * (the freetube-themed launcher does it, or paste freetube-inject.js into
+ * the DevTools console). All rules use !important so they win over
+ * whichever base theme and main/secondary colour classes are selected in
+ * Settings > Theme.
+ *
+ * Text contrast (WCAG): every text colour reads at 7:1 or more on every
+ * surface it is used on, as in the rest of Legibilis. Content sits on
+ * darker surfaces instead of lighter ones: cards are dark_background
+ * #0c1528, inputs and menus a slightly raised #1a2335, the page the theme
+ * background #131c2f. Tertiary text (views, dates) is the muted grey lifted
+ * just enough to hold 7:1 on #1a2335 (#a5afbe, 7.09-8.21:1). The active
+ * item is the Legibilis selection #404f6c with foreground text (7.04:1).
+ * Buttons carry darker_background text on the accent (7.92:1).
+ */
+
+body[class] {
+  /* Surfaces */
+  --bg-color: #131c2f !important;                 /* background */
+  --card-bg-color: #0c1528 !important;            /* dark_background */
+  --secondary-card-bg-color: #1a2335 !important;  /* raised, hue 263 */
+  --side-nav-color: #0c1528 !important;           /* dark_background */
+  --side-nav-hover-color: #1a2335 !important;     /* raised, hue 263 */
+  --side-nav-hover-text-color: #ebedf5 !important; /* foreground, 13.45:1 */
+  --side-nav-active-color: #404f6c !important;    /* selection */
+  --side-nav-active-text-color: #ebedf5 !important; /* foreground, 7.04:1 */
+  --search-bar-color: #1a2335 !important;         /* raised, hue 263 */
+  --instance-menu-color: #1a2335 !important;
+  --primary-input-color: rgba(0, 0, 0, 0.5) !important;
+  --primary-shadow-color: rgba(0, 0, 0, 0.6) !important;
+  --scrollbar-color: #404f6c !important;          /* selection */
+  --scrollbar-color-hover: #5e6879 !important;    /* hyprland_inactive_border */
+  --scrollbar-text-color-hover: #ebedf5 !important; /* foreground */
+
+  /* Text */
+  --primary-text-color: #ebedf5 !important;       /* foreground */
+  --secondary-text-color: #cddefd !important;     /* light_foreground */
+  --tertiary-text-color: #a5afbe !important;      /* muted, lifted to 7:1 on #1a2335 */
+  --title-color: #ebedf5 !important;              /* foreground */
+  --favorite-icon-color: #ccb900 !important;      /* yellow */
+
+  /* Main colour (buttons, progress); dark text on it */
+  --primary-color: #59acf5 !important;            /* accent, blue */
+  --primary-color-hover: #a4c6e1 !important;      /* bright_blue */
+  --primary-color-active: #59acf5 !important;     /* accent */
+  --text-with-main-color: #060e20 !important;     /* darker_background, 7.92:1 */
+
+  /* Secondary/accent colour (links, toggles, highlights) */
+  --accent-color-rgb: 164 198 225 !important;     /* bright_blue #a4c6e1 */
+  --accent-color: #a4c6e1 !important;             /* bright_blue */
+  --accent-color-hover: #cddefd !important;       /* light_foreground */
+  --accent-color-active: #59acf5 !important;      /* accent */
+  --accent-color-light: #cddefd !important;       /* light_foreground */
+  --accent-color-visited: #c3b2ff !important;     /* bright_magenta */
+  --accent-color-opacity1: rgb(164 198 225 / 4%) !important;
+  --accent-color-opacity2: rgb(164 198 225 / 12%) !important;
+  --accent-color-opacity3: rgb(164 198 225 / 16%) !important;
+  --accent-color-opacity4: rgb(164 198 225 / 24%) !important;
+  --text-with-accent-color: #060e20 !important;   /* darker_background */
+  --link-color: #a4c6e1 !important;               /* bright_blue */
+  --link-visited-color: #c3b2ff !important;       /* bright_magenta */
+}
+
+/* FreeTube resets the destructive colours on every descendant when a red
+   main colour is chosen, so these are set on descendants too. */
+body[class],
+body[class] * {
+  --destructive-color: #ff8177 !important;        /* red, dark text 7.93:1 */
+  --destructive-text-color: #060e20 !important;   /* darker_background */
+  --destructive-hover-color: #fab6b0 !important;  /* bright_red, 11.35:1 */
+  --destructive-active-color: #ff8177 !important; /* red */
+}
+
+::selection {
+  background-color: #404f6c;                      /* selection */
+  color: #f4f6ff;                                 /* bright_foreground, 7.63:1 */
+}
