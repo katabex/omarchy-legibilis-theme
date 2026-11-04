@@ -2,7 +2,7 @@
 
 A dark [Omarchy](https://omarchy.org) theme built for readability; *legibilis* is Latin for "readable".
 It is based on the Modus Vivendi Tinted palette, on a cobalt background, with every color at 7:1 contrast or more (WCAG AAA) and colors kept distinguishable for color-blind viewers.
-The backgrounds are classical marble sculptures toned to the palette.
+The backgrounds are classical sacred art, untoned.
 
 ![Legibilis](preview.png)
 
@@ -20,8 +20,10 @@ omarchy theme install https://github.com/katabex/omarchy-legibilis-theme
 ## Credits
 
 - Palette: [Modus themes](https://github.com/protesilaos/modus-themes) by Protesilaos Stavrou (GNU GPL-3.0-or-later).
-- Backgrounds: a photograph of the head of the *Apollo Belvedere* and a black-and-white photograph of Michelangelo's *David* (detail), both downloaded as wallpapers; the sculptures are in the public domain, but the photographs' sources and rights are unknown.
-  The theme's versions are cropped, resized and toned to the palette.
+- Backgrounds: classical sacred paintings and icons, all downloaded as wallpapers; the artworks are in the public domain, but the photographs' sources and rights are unknown.
+  The theme's versions are cropped and resized.
+  The icon of the *Black Madonna of Czestochowa* (*Matka Boza Jasnogorska*) is treated the same way; its photograph's source and rights are unknown.
+  The backgrounds ship in their original colors, cropped to keep their subjects centered: the *Ecce Homo* painting by Antonio Ciseri, the *Sistine Madonna*, the *Transfiguration* and *Saint Michael* by Raphael, the *Madonna with Child and Angels* by Giovanni Battista Salvi, known as Il Sassoferrato, and the Czestochowa icon in full color.
 
 ## License
 
